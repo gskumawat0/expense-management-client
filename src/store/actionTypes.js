@@ -14,3 +14,12 @@ export const ADD_CATEGORY = 'ADD_CATEGORY';
 //profile
 export const UPDATE_PROFILE = 'UPDATE_PROFILE';
 export const GET_PROFILE = 'GET_PROFILE';
+
+
+//success
+export const ADD_SUCCESS = 'ADD_SUCCESS'
+export const REMOVE_SUCCESS = 'REMOVE_SUCCESS'
+
+//error
+export const REMOVE_ERROR = 'REMOVE_ERROR'
+export const ADD_ERROR = 'ADD_ERROR'

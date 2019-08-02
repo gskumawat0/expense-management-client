@@ -1,0 +1,4 @@
+.deleted-item{
+    text-decoration-line: line-through;
+    text-decoration-color: brown;
+}

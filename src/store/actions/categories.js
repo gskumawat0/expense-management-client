@@ -1,6 +1,6 @@
 import { apiCall } from '../../services/api';
 import { successHandler } from './success';
-import { errorHandler } from './errors'
+import { errorHandler } from './error'
 
 import { GET_CATEGORIES, ADD_CATEGORY, UPDATE_CATEGORY, DELETE_CATEGORY } from "../actionTypes";
 
@@ -28,7 +28,7 @@ export const updateCategory = (category) => {
 
 export const deleteCategory = (categoryId) => {
     return {
-        type: DEL_CATEGORY,
+        type: DELETE_CATEGORY,
         categoryId
     }
 }
@@ -36,9 +36,10 @@ export const deleteCategory = (categoryId) => {
 export function categoryHandler(method, url, categoryData, actionType) {
     return dispatch => {
         return new Promise((resolve, reject)=>{
-            return apiCall(method, `${process.env.REACT_APP_API_URL}/${url}`, categoryData)
+            return apiCall(method, `${process.env.REACT_APP_API_URL}${url}`, categoryData)
                 .then(({ success, message, ...data }) => {
                     if (success) {
+                        // debugger
                         switch (actionType) {
                             case 'getCategories':
                                 dispatch(getCategories(data.categories));

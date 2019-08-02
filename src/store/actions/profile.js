@@ -11,17 +11,17 @@ export const getProfile = (profile)=>{
     }
 }
 
-export const profileHnadler =  (method, url, profileData, actionType)=>{
+export const profileHandler =  (method, url, profileData, actionType)=>{
     return dispatch =>{
         return new Promise((resolve, reject) =>{
-            return apiCall(method, `${process.env.REACT_APP_API_URL}/${url}`, profileData)
+            return apiCall(method, `${process.env.REACT_APP_API_URL}${url}`, profileData)
                 .then(({success,message, ...data}) => {
                     if(success){
                         switch(actionType){
                             case 'getProfile':
                                 dispatch(getProfile(data.profile))
                                 break;
-                            case 'updateprofile':
+                            case 'updateProfile':
                                 dispatch(successHandler(message));
                                 dispatch(getProfile(data.profile));
                                 break;

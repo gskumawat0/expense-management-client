@@ -6,7 +6,7 @@ const defaultProfile ={
     totalBudget: 0
 } 
 
-const profileReducer = ({state = defaultProfile }, action)=>{
+const profileReducer = (state = defaultProfile, action)=>{
     switch(action.type){
         case GET_PROFILE:
             return {...state, ...action.profile}

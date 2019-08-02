@@ -1,0 +1,25 @@
+.App{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    margin: auto
+}
+
+.side-nav{
+    width: 10%;
+    height: 100vh;
+}
+
+.side-nav li {
+    text-align: center;
+    padding: 10px;
+}
+
+.main {
+    width: 90%;
+    height: 100vh;
+    box-sizing:  border-box;
+    padding: 1rem 4rem 1rem 2rem;
+    max-height: 100vh;
+    overflow: scroll;
+}

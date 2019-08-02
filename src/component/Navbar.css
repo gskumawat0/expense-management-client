@@ -1,0 +1,12 @@
+nav.navbar{
+    list-style: none;
+    max-height: 100vh;
+    /* padding: 1.5rem;
+    height: 100vh; */
+}
+
+/* .nav-active{
+    color: #fff;
+    background: burlywood;
+    padding: 10px;
+} */

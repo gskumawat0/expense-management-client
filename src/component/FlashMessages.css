@@ -1,0 +1,6 @@
+.message{
+    position: absolute;
+    width: 95%;
+    overflow: visible;
+    z-index: 1000;
+}

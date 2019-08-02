@@ -1,14 +1,14 @@
 import { apiCall } from '../../services/api';
 import { successHandler } from './success';
-import { errorHandler } from './errors'
+import { errorHandler } from './error'
 
 import { GET_EXPENSES, ADD_EXPENSE, UPDATE_EXPENSE, } from "../actionTypes";
 
 
-export const getExpenses = (categories) => {
+export const getExpenses = (expenses) => {
     return {
         type: GET_EXPENSES,
-        categories
+        expenses
     }
 }
 
@@ -31,12 +31,13 @@ export const updateExpense = (expense) => {
 export function expenseHandler(method, url, expenseData, actionType) {
     return dispatch => {
         return new Promise((resolve, reject)=>{
-            return apiCall(method, `${process.env.REACT_APP_API_URL}/${url}`, expenseData)
+            return apiCall(method, `${process.env.REACT_APP_API_URL}${url}`, expenseData)
                 .then(({ success, message, ...data }) => {
                     if (success) {
+                        // debugger
                         switch (actionType) {
                             case 'getExpenses':
-                                dispatch(getExpenses(data.categories));
+                                dispatch(getExpenses(data.expenses));
                                 break;
                             case 'addExpense':
                                 dispatch(successHandler(message));

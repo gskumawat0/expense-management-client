@@ -2,7 +2,7 @@ import {GET_CATEGORIES, UPDATE_CATEGORY, ADD_CATEGORY, DELETE_CATEGORY} from '..
 
 const defaultCategories = []; 
 
-const categoriesReducer = ({state = defaultCategories }, action)=>{
+const categoriesReducer = (state = defaultCategories , action)=>{
     switch(action.type){
         case GET_CATEGORIES:
             return action.categories

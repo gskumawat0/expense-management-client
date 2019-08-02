@@ -1,0 +1,34 @@
+.category-items {
+    border: 2px solid gray;
+    margin-bottom: 2px;
+    padding: 10px 20px 5px;
+    color: #000;
+    position: relative;
+    border-radius: 4px;
+  }
+
+  .category-list{
+      list-style:  none;
+      padding: 0;
+  }
+  
+  .delete-button{
+        margin-left: auto;
+        margin-right: 0%;
+        text-align: end;
+        font-weight: 700;
+        position: absolute;
+        right: 0;
+        padding: 0px 10px 10px 10px;
+  }
+  
+  .btn-submit {
+    display: inline;
+    /* width: 10%; */
+    box-sizing: border-box;
+    padding: 10px 30px;
+    margin: 5px;
+    border-radius: 5px;
+    /* background:  #34495e; */
+    border: none;
+  }

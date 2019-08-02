@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import errorReducer from './errors';
+import errorReducer from './error';
 import successReducer from './success';
 import profileReducer from './profile'
 import categoriesReducer from './categories';
