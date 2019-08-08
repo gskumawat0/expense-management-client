@@ -81,6 +81,7 @@ class Setting extends Component{
     }
 
     submitCategory = (e)=>{
+        e.preventDefault();
         let {category, categoryId} = this.state;
         if(!category){
             this.props.errorHandler('please enter category');
